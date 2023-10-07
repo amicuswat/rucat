@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<style>
+
+</style>
+<head>
+  <!--    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>НПО КАРБОН TMG</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script src="js/libs/jquery.js"></script>
+   
+    <script src="js/tmg_script_new.js"></script>
+   
+
+
+
+    <script type="text/javascript">
+
+    $(function(){
+        let segments = ['skdjhf', 'ewirkj', 'umdsl', 'dskfjl', 'immsls']
+
+        $(".working-area-container").empty()
+        // -- Отрисовываем таблицу
+        let headerFooter = '<th></th>'
+        headerFooter += '<th style="min-width: 15%;"></th>'
+        headerFooter += '<th></th>'
+        headerFooter += '<th></th>'
+        headerFooter += '<th></th>'
+        headerFooter += '<th></th>'
+
+        let tableBody = '<table class="segs-list__body">'
+        tableBody += '<thead><tr class="segs-list__header">' + headerFooter + '</tr></thead>'
+        tableBody += '<tbody class="segs-table"></tbody>'
+        // tableBody += '<tfoot><tr>' + headerFooter + '</tr></tfoot>'
+        tableBody += '</table>'
+
+        $(".working-area-container").append(tableBody);
+
+        $.each(segments, function(key, seg){
+            let tableRow = '<tr>';
+            tableRow += '<td style="min-width: 15%;"><input type="hidden" value='+(key-1+2)+'>'+(key-1+2)+'</td>'
+            tableRow += '<td>'+seg+'</td>'
+            tableRow += '<td><textarea size=10></textarea></td>'
+            tableRow += '<td>!</td>'
+            tableRow += '<td>100%</td>'
+            tableRow += '<td>ok</td>'
+            tableRow += '</tr>';
+
+            $('.segs-table').append(tableRow)
+        })
+        //   initOrLogin();
+        
+        // //   initGrafStat();
+        // //   NewGrafikStatika();   // создаем хотябы одно окно графиков статики
+    });
+
+    </script>
+
+</head>
+<body  style="position: relative;">
+    <div class="editor-page">
+        <div class="editor-header">
+            <div id="navigtion-panel" class="editor-header__row">
+                <div class="navigation-panel__wrapper">
+                    <div class="header-home-button"></div>
+                </div>
+                <div class="editor-header__row-buttons"></div>
+            </div>
+            <div id="tool-panel" class="editor-header__row"></div>
+        </div>
+        <div class="editor-page__content"></div>
+    </div>
+
+    <!-- <div class="top-container" style="min-width: 100%; min-height: 8vh; background-color: aqua;">Верхний</div>
+    <div class="middle-container" style="min-width: 100%; min-height: 70vh; background-color: aquamarine; display: flex;">
+        <div class="working-area-container" style="min-width: 70%; min-height: 70vh; background-color: azure;">Редактор</div>
+        <div class="tm-area-container" style="min-width: 30%; min-height: 70vh; background-color: bisque;">ТМ</div>
+    </div>
+    <div class="bottom-container" style="min-width: 100%; min-height: 22vh; background-color: aqua;">Нижний</div> -->
+</body>
+</html>
